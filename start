@@ -1,0 +1,88 @@
+#Hannah Hall & Josh Velazquez
+#CS 330 Fall 2023
+#Program 4
+
+import os
+
+# Clear the workspace
+for var in list(globals()):
+    if var != 'os':
+        del globals()[var]
+
+# Set options
+import sys
+sys.setrecursionlimit(10**6)
+
+scenario = 1
+scenario_trace = [True, False][scenario-1]
+scenario_iterations = [100, 1000000][scenario-1]
+scenario_interval = [1, 10000][scenario-1]
+transition_probability = [[0.8, 0.4, 0.3, 0.4, 0.3, 0.3, 0.8, 0.8, 0.8],
+                          [0.9, 0.6, 0.3, 0.2, 0.2, 0.4, 0.7, 0.9, 0.7]][scenario-1]
+state_sequence = [[1, 2, 3, 4, 5, 6, 7],
+                  [7, 1, 2, 3, 4, 5, 6]][scenario-1]
+transition_sequence = [[1, 2, 3, 4, 5, 6, 7, 8, 9],
+                       [9, 1, 2, 3, 4, 5, 6, 7, 8]][scenario-1]
+
+def write_text(textfile, msg, first=False):
+    with open(textfile, 'a') as file:
+        file.write(msg)
+
+def num_width(x, left, right):
+    return format(round(x, right), f".{right}f").rjust(left + right + (right > 0))
+
+computer = 2
+output_path =
+output_file = os.path.join(output_path, f"CS 330, State machines, Scenario {scenario} {datetime.date.today()}.txt")
+write_text(\n", True)
+
+
+#Initialize constants
+FOLLOW = 1
+PULL_OUT = 2
+ACCELERATE = 3
+PULL_IN_AHEAD = 4
+PULL_IN_BEHIND = 5
+DECELERATE = 6
+DONE = 7
+
+#Program state and transition counters
+state_count = [0] * 7
+transition_count = [0] * 9
+
+
+#Action functions
+def follow_action():
+    if scenario.trace:
+        write.text(output.file, "state= 1 Follow")
+    state.count[FOLLOW] += 1
+
+def pull_out_action():
+    if scenario.trace:
+        write.text(output.file, "state= 2 Pull out")
+    state.count[PULL.OUT] += 1
+
+def accelerate_action():
+    if scenario.trace:
+        write.text(output.file, "state= 3 Accelerate")
+    state.count[ACCELERATE] += 1
+
+def pull_in_ahead_action():
+    if scenario.trace:
+        write.text(output.file, "state= 4 Pull in ahead")
+    state.count[PULL.IN.AHEAD] += 1
+
+def pull_in_behind_action():
+    if scenario.trace:
+        write.text(output.file, "state= 5 Pull in behind")
+    state.count[PULL.IN.BEHIND] += 1
+
+def decelerate_action():
+    if scenario.trace:
+        write.text(output.file, "state= 6 Decelerate")
+    state.count[DECELERATE] += 1
+
+def done_action():
+    if scenario.trace:
+        write.text(output.file, "state= 7 Done\n")
+    state.count[DONE] += 1
