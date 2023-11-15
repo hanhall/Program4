@@ -1,0 +1,10 @@
+CS 330, State machines, Begin 2023-11-15 12:00:35.044034scenario                = 2
+trace                   = False
+iterations              = 1000000
+transition probabilities= 0.9 0.6 0.3 0.2 0.2 0.4 0.7 0.9 0.7
+state counts            = 6169252 5553951 3333367 1428523 6508783 1110095 1000000
+state frequencies       = 0.246 0.221 0.133 0.057 0.259 0.044 0.040
+transition counts       = 5553951 3333367 1000000 2220584 1334124 999243 4553951 999243 1000000
+transition frequencies  = 0.265 0.159 0.048 0.106 0.064 0.048 0.217 0.048 0.048
+
+CS 330, State machines, End
