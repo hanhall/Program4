@@ -34,7 +34,7 @@ def num_width(x, left, right):
 computer = 2
 output_path =
 output_file = os.path.join(output_path, f"CS 330, State machines, Scenario {scenario} {datetime.date.today()}.txt")
-write_text(\n", True)
+write_text("\n", True)
 
 
 #Initialize constants
